@@ -35,6 +35,15 @@ module.exports = {
           presets: ['es2015', 'stage-2', 'react'],
         },
       },
+      {
+        test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+        loader: 'file-loader',
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader',
+        query: { mimetype: ['image/png', 'image/jpeg'] },
+      },
     ],
   },
   devServer: {
