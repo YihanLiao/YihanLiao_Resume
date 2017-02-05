@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
-import '../semantic/dist/semantic.css';
+// import css from './semantic.min.css';
 import Main from './component/main';
 import AboutMe from './component/aboutme';
 import Protfoilo from './component/portfoilo';

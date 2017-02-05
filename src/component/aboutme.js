@@ -1,6 +1,12 @@
 import React from 'react';
 
 class AboutMe extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      show: false,
+    };
+  }
   render() {
     return (
       <div>

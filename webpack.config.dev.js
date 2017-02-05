@@ -1,5 +1,4 @@
 // webpack.config.dev.js
-const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -10,10 +9,6 @@ module.exports = {
     'webpack/hot/dev-server',
     './src/index',
   ],
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
@@ -28,7 +23,7 @@ module.exports = {
         loaders: ['style', 'css'],
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
@@ -36,7 +31,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+        test: /\.(eot|woff|woff2|svg|ttf|json)([\?]?.*)$/,
         loader: 'file-loader',
       },
       {
