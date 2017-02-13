@@ -4,6 +4,12 @@ const favicon = require('static-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+
+const webpackConfig = require('./webpack.config.dev.js');
+const compiler = webpack(webpackConfig);
 
 const routes = require('./routes/index');
 const api = require('./routes/api');
@@ -20,6 +26,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(webpackDevMiddleware(compiler, {
+  hot: true,
+  filename: 'bundle.js',
+  publicPath: '/assets/',
+  stats: {
+    colors: true,
+  },
+  historyApiFallback: true,
+}));
+
+app.use(webpackHotMiddleware(compiler, {
+  log: console.log,
+  path: '/__webpack_hmr',
+  heartbeat: 10 * 1000,
+}));
 
 app.use('/api', api);
 app.use('/', routes);

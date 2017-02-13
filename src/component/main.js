@@ -7,7 +7,7 @@ class Main extends React.Component {
       <div className="container">
         <Link to="/"><h2>YihanLiao</h2></Link>
         <ul>
-          <li><Link to="/about">About ME.</Link></li>
+          <li><Link to="/about">About ME !!.</Link></li>
           <li><Link to="/portfoilo">Portfoilo</Link></li>
         </ul>
         { this.props.children }

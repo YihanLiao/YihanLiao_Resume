@@ -6,7 +6,6 @@ import AboutMe from './component/aboutme';
 import Protfoilo from './component/portfoilo';
 // import Page404 from './component/page404.js';
 
-
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={Main}>
@@ -16,3 +15,7 @@ ReactDOM.render((
     </Route>
   </Router>
 ), document.getElementById('root'));
+
+if (module.hot) {
+  module.hot.accept();
+}

@@ -1,27 +1,25 @@
 // webpack.config.dev.js
+const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-eval-source-map',
+  context: path.join(__dirname, 'src'),
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/dev-server',
-    './src/index',
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    './index.js',
   ],
+  output: {
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js',
+    publicPath: '/assets/',
+  },
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      title: 'Resume',
-    }),
+    new webpack.NoErrorsPlugin(),
   ],
   module: {
     loaders: [
-      {
-        test: /\.css$/,
-        loaders: ['style', 'css'],
-      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -30,19 +28,6 @@ module.exports = {
           presets: ['es2015', 'stage-2', 'react'],
         },
       },
-      {
-        test: /\.(eot|woff|woff2|svg|ttf|json)([\?]?.*)$/,
-        loader: 'file-loader',
-      },
-      {
-        test: /\.(png|jpg)$/,
-        loader: 'url-loader',
-        query: { mimetype: ['image/png', 'image/jpeg'] },
-      },
     ],
-  },
-  devServer: {
-    contentBase: './dist',
-    hot: true,
   },
 };
