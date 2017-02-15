@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(webpackDevMiddleware(compiler, {
   hot: true,
   filename: 'bundle.js',
-  publicPath: '/assets/',
+  publicPath: '/js/',
   stats: {
     colors: true,
   },
