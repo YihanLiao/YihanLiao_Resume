@@ -1,38 +1,51 @@
 import React from 'react';
 import { Link } from 'react-router';
-import request from 'superagent';
+import { connect } from 'react-redux';
+import { querydata } from '../action';
+// import request from 'superagent';
 
 class Main extends React.Component {
   constructor() {
     super();
     this.state = {
       name: 'NAME',
-    }
+    };
   }
   componentWillMount() {
-    request
-      .get('/api/yihan')
-      .end((err, res) => {
-        this.setState({ name: res.body.name });
-        console.log(res.body);
-      });
+    this.props.querydata();
   }
   render() {
     return (
-      <div className="container">
-        <Link to="/"><h1>{ this.state.name }</h1></Link>
+      <header className="container">
+        <Link to="/"><h1>{this.props.data.name} &apos;s WebSite</h1></Link>
         <nav className="btn-group" role="group" aria-label="...">
-          <Link to="/about"><button type="button" className="btn btn-default">About</button></Link>
+          <Link to="/experience"><button type="button" className="btn btn-default">experience</button></Link>
           <Link to="/portfoilo"><button type="button" className="btn btn-default">Portfoilo</button></Link>
         </nav>
         { this.props.children }
-      </div>
+      </header>
+
     );
   }
 }
 
 Main.propTypes = {
   children: React.PropTypes.element,
+  querydata: React.PropTypes.func,
 };
 
-export default Main;
+const mapStateToProps = (state) => {
+  return {
+    data: state.dataStore,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    querydata: () => {
+      dispatch(querydata('Yihan'))
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

@@ -1,19 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import Route from './route';
+import reducer from './reducer';
 
-const AppContainer = ({ children }) =>
-  <div>
-    { children }
-  </div>;
-AppContainer.defaultProps = {
-  children: React.PropTypes.node.isRequire,
-};
+let store = createStore(reducer);
 
 ReactDOM.render((
-  <AppContainer>
+  <Provider store={store}>
     <Route />
-  </AppContainer>
+  </Provider>
 ), document.getElementById('root'));
 
 if (module.hot) {

@@ -15,7 +15,7 @@
 ## 技能
 * HTML
 * CSS > SCSS, RWD
-* Javascript > AngularJs 1.x , ReactJs, jQuery
+* Javascript > ReactJs, AngularJs 1.x , Express, jQuery
 * Webpack
 * Git
 
@@ -23,10 +23,15 @@
 
 ## 執行專案
 
-### 104職涯社群更版(參與時間 2016.02 - now)
+### 104職涯社群更版(參與時間 2016.02 - Present)
 > 使用nodeJs, ReactJs, Redux, Webpack 各式開源套件建立的Single Page Application 網站
 <br/>
-利用nodeJs server side render, Redux 處理資料流, React建構畫面
+利用nodeJs server side render, 搭配 Redux 處理資料流
 
-### [104職涯社群](plus.104.com.tw) (參與時間 2015.07 - 2016.02)
+### [104職涯社群](http://plus.104.com.tw) (參與時間 2015.07 - 2016.02)
 > 使用AngularJs 1.x 版本建立的Single Page Application 網站
+<br />
+主要搭配Java撰寫的後端來做的社群網站，利用AngularJs 內建的Api來處理Router, 雙向資料綁定
+
+### 4Gamers相關活動網站 (參與時間 2014.08 - 2015.07)
+> 利用Scss 與 jQuery 製作各式短期活動網站
