@@ -1,30 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import { querydata } from '../action';
-// import request from 'superagent';
+import { mapDispatchToProps } from '../action';
 
 class Main extends React.Component {
   constructor() {
     super();
-    this.state = {
-      name: 'NAME',
-    };
   }
   componentWillMount() {
     this.props.querydata();
   }
   render() {
     return (
-      <header className="container">
-        <Link to="/"><h1>{this.props.data.name} &apos;s WebSite</h1></Link>
-        <nav className="btn-group" role="group" aria-label="...">
-          <Link to="/experience"><button type="button" className="btn btn-default">experience</button></Link>
-          <Link to="/portfoilo"><button type="button" className="btn btn-default">Portfoilo</button></Link>
-        </nav>
+      <div className="container">
+        <header>
+          <Link to="/"><h1>{this.props.data.name}</h1></Link>
+          <nav className="btn-group" role="group" aria-label="...">
+            <Link to="/about"><button type="button" className="btn btn-default">about</button></Link>
+            <Link to="/experience"><button type="button" className="btn btn-default">experience</button></Link>
+            <Link to="/portfoilo"><button type="button" className="btn btn-default">Portfoilo</button></Link>
+          </nav>
+        </header>
+        {
+          this.props.location.pathname === '/' &&
+          <span>MainPage</span>
+        }
         { this.props.children }
-      </header>
-
+        <footer>
+          <div>{this.props.data.email}</div>
+        </footer>
+      </div>
     );
   }
 }
@@ -32,19 +37,12 @@ class Main extends React.Component {
 Main.propTypes = {
   children: React.PropTypes.element,
   querydata: React.PropTypes.func,
+  data: React.PropTypes.object,
 };
 
 const mapStateToProps = (state) => {
   return {
-    data: state.dataStore,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    querydata: () => {
-      dispatch(querydata('Yihan'))
-    },
+    data: state.data,
   };
 };
 

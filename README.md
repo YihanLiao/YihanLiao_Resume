@@ -33,5 +33,5 @@
 <br />
 主要搭配Java撰寫的後端來做的社群網站，利用AngularJs 內建的Api來處理Router, 雙向資料綁定
 
-### 4Gamers相關活動網站 (參與時間 2014.08 - 2015.07)
-> 利用Scss 與 jQuery 製作各式短期活動網站
+### 4Gamers官網 & 相關活動網站 (參與時間 2014.08 - 2015.07)
+> 利用Scss 與 jQuery (& 各式Plugins) jTemplate 進行切板與資料渲染與效果

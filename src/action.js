@@ -1,22 +1,14 @@
-// import request from 'superagent';
+import request from 'superagent';
 
-// export const querydata = (dispatch) => {
-//   return (
-//     request
-//       .get('/api/yihan')
-//       .end((err, res) => {
-//         console.log(res.body);
-//         dispatch({
-//           action: 'QueryData',
-//           data: res.body,
-//         });
-//       })
-//   );
-// };
-
-export const querydata = (name) => {
+export const mapDispatchToProps = (dispatch) => {
   return {
-    type: 'QueryData',
-    data: { name },
+    querydata: () => {
+      request
+        .get('/api/yihan')
+        .end((err, res) => {
+          const data = res.body;
+          dispatch({ type: 'QueryData', data });
+        });
+    },
   };
 };

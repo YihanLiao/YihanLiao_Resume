@@ -2,9 +2,12 @@ import { combineReducers } from 'redux';
 
 const defaultModel = {
   name: 'Name',
+  email: '',
+  summary: '',
+  weblink: [],
 };
 
-const dataStore = (state = defaultModel, action) => {
+const data = (state = defaultModel, action) => {
   switch (action.type) {
     case 'QueryData':
       return Object.assign({}, state, action.data);
@@ -13,4 +16,4 @@ const dataStore = (state = defaultModel, action) => {
   }
 };
 
-export default combineReducers({ dataStore });
+export default combineReducers({ data });
