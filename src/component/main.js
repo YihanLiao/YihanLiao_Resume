@@ -27,7 +27,7 @@ class Main extends React.Component {
             <section>
               <img src="/image/nynacat.gif" className="nyancat" alt="nyan cat." />
               <article className="introduce">
-                <p>這個自我介紹的專案開發使用 NodeJs + nginx 架站。專案架構為Express做伺服器框架與 ReactJs 做前端渲染。</p>
+                <p>這個自我介紹的專案開發使用Express做伺服器框架與 ReactJs 做前端渲染。</p>
                 <p>專案原始碼可以在我的 <a href="https://github.com/YihanLiao/YihanLiao_Resume">Github</a> 下載來看。</p>
               </article>
             </section>

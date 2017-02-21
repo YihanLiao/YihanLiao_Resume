@@ -16,4 +16,13 @@ const data = (state = defaultModel, action) => {
   }
 };
 
-export default combineReducers({ data });
+const exp = (state = { work: [], education: [] }, action) => {
+  switch (action.type) {
+    case 'QueryExp':
+      return Object.assign({}, state, action.exp);
+    default:
+      return state;
+  }
+};
+
+export default combineReducers({ data, exp });

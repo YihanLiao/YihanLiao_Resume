@@ -35,6 +35,11 @@ a:active {
   line-height: 2em;
 }
 
+.tableExp{
+  background-color: #fff;
+  border-radius: 3px;
+}
+
 .header,
 .main,
 .footer{

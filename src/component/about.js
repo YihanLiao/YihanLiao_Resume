@@ -9,9 +9,11 @@ const About = ({ data }) =>
       { data.summary }
     </article>
     <div>
-      {data.weblink.map((obj, index) => {
-        return (<div className="weblink" key={index}><a href={obj.url}>{obj.desc}</a></div>);
-      })}
+      {
+        data.weblink.map((obj, index) => {
+          return (<div className="weblink" key={index}><a href={obj.url}>{obj.desc}</a></div>);
+        })
+      }
     </div>
   </section>;
 
