@@ -1,3 +1,7 @@
+.bgcolor{
+  background: #666;
+}
+
 a,
 a:visited,
 a:hover,
@@ -5,8 +9,34 @@ a:active {
   text-decoration: none;
 }
 
+.name{
+  padding: 15px 0;
+  color: white;
+}
+
 .avatar{
   max-width: 100%;
   border: 3px solid black;
   border-radius: 13px;
+}
+
+.nyancat{
+  max-width: 100%;
+}
+
+.introduce,
+.summary{
+  padding: 15px 0;
+  color: white;
+  line-height: 2em;
+}
+
+.weblink{
+  line-height: 2em;
+}
+
+.header,
+.main,
+.footer{
+  padding: 15px 0;
 }

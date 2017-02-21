@@ -13,7 +13,7 @@ class Main extends React.Component {
   render() {
     return (
       <div className="container">
-        <header>
+        <header className="header">
           <Link to="/"><h1>{this.props.data.name}</h1></Link>
           <nav className="btn-group" role="group" aria-label="...">
             <Link to="/about"><button type="button" className="btn btn-default">about</button></Link>
@@ -21,13 +21,21 @@ class Main extends React.Component {
             <Link to="/portfoilo"><button type="button" className="btn btn-default">Portfoilo</button></Link>
           </nav>
         </header>
-        {
-          this.props.location.pathname === '/' &&
-          <span>MainPage</span>
-        }
-        { this.props.children }
-        <footer>
-          <div>{this.props.data.email}</div>
+        <main className="main">
+          {
+            this.props.location.pathname === '/' &&
+            <section>
+              <img src="/image/nynacat.gif" className="nyancat" alt="nyan cat." />
+              <article className="introduce">
+                <p>這個自我介紹的專案開發使用 NodeJs + nginx 架站。專案架構為Express做伺服器框架與 ReactJs 做前端渲染。</p>
+                <p>專案原始碼可以在我的 <a href="https://github.com/YihanLiao/YihanLiao_Resume">Github</a> 下載來看。</p>
+              </article>
+            </section>
+          }
+          { this.props.children }
+        </main>
+        <footer className="footer">
+          <p>聯絡資訊: {this.props.data.email}</p>
         </footer>
       </div>
     );

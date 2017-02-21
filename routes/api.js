@@ -48,7 +48,7 @@ router.get('/yihan', (req, res) => {
     weblink: [
       {
         desc: 'personalWeb',
-        url: 'http://tw.yahoo.com/',
+        url: 'http://yiihanliao.info/',
       },
       {
         desc: 'Linkedin',

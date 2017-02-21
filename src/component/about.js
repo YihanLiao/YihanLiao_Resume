@@ -2,13 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const About = ({ data }) =>
-  <div className="col-md-12">
-    <div>姓名：{ data.name }</div>
-    <img src={data.photo} className="avatar" />
-    <section>
+  <section>
+    <img src={data.photo} className="avatar" alt="Baymax" />
+    <h3 className="name">姓名：{ data.name }</h3>
+    <article className="summary">
       { data.summary }
-    </section>
-  </div>;
+    </article>
+    <div>
+      {data.weblink.map((obj, index) => {
+        return (<div className="weblink" key={index}><a href={obj.url}>{obj.desc}</a></div>);
+      })}
+    </div>
+  </section>;
+
 
 const mapStateToProps = (state) => {
   return {
