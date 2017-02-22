@@ -18,13 +18,5 @@ export const mapDispatchToProps = (dispatch) => {
           dispatch({ type: 'QueryExp', exp });
         });
     },
-    queryproject: () => {
-      request
-        .get('/api/yihan/project')
-        .end((err, res) => {
-          const project = res.body;
-          dispatch({ type: 'QueryProject', project });
-        });
-    },
   };
 };

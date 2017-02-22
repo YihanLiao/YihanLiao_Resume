@@ -2,6 +2,12 @@
 
 ====
 
+## 基本資料
+* 姓名： 廖倚韓
+* 聯絡方式： yiihanliao@gmail.com
+* 個人網頁： [www.yiihanliao.info](http://www.yiihanliao.info)
+* Linkedin： [Linkedin](https://www.linkedin.com/in/yihan-liao-781099128/)
+
 ## 簡歷
 | 期間               | 單位     | Title   |
 |-------------------|----------|---------|
@@ -34,4 +40,4 @@
 主要搭配Java撰寫的後端來做的社群網站，利用AngularJs 內建的Api來處理Router, 雙向資料綁定
 
 ### 4Gamers官網 & 相關活動網站 (參與時間 2014.08 - 2015.07)
-> 利用Scss 與 jQuery (& 各式Plugins) jTemplate 進行切板與資料渲染與效果
+> 利用Scss 與 jQuery (& 各式Plugins) jTemplate 進行切板與資料渲染、呈現＆燈箱、視差滾動之類的特效

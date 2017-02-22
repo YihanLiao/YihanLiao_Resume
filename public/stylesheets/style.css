@@ -1,5 +1,5 @@
 .bgcolor{
-  background: #666;
+  background: #ddd;
 }
 
 a,
@@ -11,13 +11,15 @@ a:active {
 
 .name{
   padding: 15px 0;
-  color: white;
 }
 
-.avatar{
+.avatar,
+.articleImg{
+  margin: 0 auto;
+  display: block;
+  border: 2px solid black;
+  border-radius: 5px;
   max-width: 100%;
-  border: 3px solid black;
-  border-radius: 13px;
 }
 
 .nyancat{
@@ -27,7 +29,6 @@ a:active {
 .introduce,
 .summary{
   padding: 15px 0;
-  color: white;
   line-height: 2em;
 }
 
@@ -38,6 +39,17 @@ a:active {
 .tableExp{
   background-color: #fff;
   border-radius: 3px;
+}
+
+.headTitle{
+  line-height: 40px;
+}
+.articleBlock{
+  margin: 20px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #eee;
+  line-height: 2em;
 }
 
 .header,

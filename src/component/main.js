@@ -18,7 +18,6 @@ class Main extends React.Component {
           <nav className="btn-group" role="group" aria-label="...">
             <Link to="/about"><button type="button" className="btn btn-default">about</button></Link>
             <Link to="/experience"><button type="button" className="btn btn-default">experience</button></Link>
-            <Link to="/portfoilo"><button type="button" className="btn btn-default">Portfoilo</button></Link>
           </nav>
         </header>
         <main className="main">
@@ -28,7 +27,8 @@ class Main extends React.Component {
               <img src="/image/nynacat.gif" className="nyancat" alt="nyan cat." />
               <article className="introduce">
                 <p>這個自我介紹的專案開發使用Express做伺服器框架與 ReactJs 做前端渲染。</p>
-                <p>專案原始碼可以在我的 <a href="https://github.com/YihanLiao/YihanLiao_Resume">Github</a> 下載來看。</p>
+                <p>專案原始碼可以在我的 <a href="https://github.com/YihanLiao/YihanLiao_Resume">Github專案</a> 下載來看。</p>
+                <p>對...... 我知道這網站很沒設計感 但是我盡力了Orz</p>
               </article>
             </section>
           }

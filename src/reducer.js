@@ -16,7 +16,7 @@ const data = (state = defaultModel, action) => {
   }
 };
 
-const exp = (state = { work: [], education: [] }, action) => {
+const exp = (state = { work: [], education: [], project: [] }, action) => {
   switch (action.type) {
     case 'QueryExp':
       return Object.assign({}, state, action.exp);

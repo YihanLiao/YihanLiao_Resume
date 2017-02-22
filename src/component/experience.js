@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { mapDispatchToProps } from '../action';
-import Exptabunit from '../unit/experience';
+import ExpTabUnit from '../unit/experience';
+import ProjectUnit from '../unit/project';
 
 class ExperienceList extends React.Component {
   constructor() {
@@ -11,33 +12,44 @@ class ExperienceList extends React.Component {
     this.props.queryexp();
   }
   render() {
-    const { work, education } = this.props.exp;
+    const { work, education, project } = this.props.exp;
     return (
-      <table className="table table-striped tableExp col-md-7">
-        <thead>
-          <tr>
-            <th>期間</th>
-            <th>單位</th>
-            <th>稱謂</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            work.map((obj, index) => {
-              return (
-                <Exptabunit data={obj} key={index} />
-              );
-            })
-          }
-          {
-            education.map((obj, index) => {
-              return (
-                <Exptabunit data={obj} key={index} />
-              );
-            })
-          }
-        </tbody>
-      </table>
+      <section>
+        <h2>簡歷</h2>
+        <table className="table table-striped tableExp">
+          <thead>
+            <tr>
+              <th>期間</th>
+              <th>單位</th>
+              <th>稱謂</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              work.map((obj, index) => {
+                return (
+                  <ExpTabUnit data={obj} key={index} />
+                );
+              })
+            }
+            {
+              education.map((obj, index) => {
+                return (
+                  <ExpTabUnit data={obj} key={index} />
+                );
+              })
+            }
+          </tbody>
+        </table>
+        <h2>參與專案：</h2>
+        {
+          project.map((obj, index) => {
+            return (
+              <ProjectUnit data={obj} key={index} />
+            );
+          })
+        }
+      </section>
     );
   }
 }

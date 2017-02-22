@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const About = ({ data }) =>
   <section>
-    <img src={data.photo} className="avatar" alt="Baymax" />
+    <img src={data.photo} className="avatar" alt="avatar" />
     <h3 className="name">姓名：{ data.name }</h3>
     <article className="summary">
       { data.summary }
