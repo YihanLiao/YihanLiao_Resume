@@ -8,10 +8,16 @@ router.get('/yihan/experience', (req, res) => {
   res.send({
     work: [
       {
+        componyName: '嘉碼科技有限公司',
+        title: '全端工程師',
+        periodStart: '2017.03',
+        periodEnd: 'present',
+      },
+      {
         componyName: '一零四資訊科技股份有限公司',
         title: '前端工程師',
         periodStart: '2015.07',
-        periodEnd: 'Present',
+        periodEnd: '2017.03',
       },
       {
         componyName: '4Gamers 就肆電競股份有限公司',
