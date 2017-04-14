@@ -9,6 +9,7 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const webpackConfig = require('./webpack.config.dev.js');
+
 const compiler = webpack(webpackConfig);
 
 const routes = require('./routes/index');

@@ -26,34 +26,21 @@ class ExperienceList extends React.Component {
           </thead>
           <tbody>
             {
-              work.map((obj, index) => {
-                return (
-                  <ExpTabUnit data={obj} key={index} />
-                );
-              })
+              work.map((obj, index) => <ExpTabUnit data={obj} key={index} />)
             }
             {
-              education.map((obj, index) => {
-                return (
-                  <ExpTabUnit data={obj} key={index} />
-                );
-              })
+              education.map((obj, index) => <ExpTabUnit data={obj} key={index} />)
             }
           </tbody>
         </table>
         <h2>參與專案：</h2>
         {
-          project.map((obj, index) => {
-            return (
-              <ProjectUnit data={obj} key={index} />
-            );
-          })
+          project.map((obj, index) => <ProjectUnit data={obj} key={index} />)
         }
       </section>
     );
   }
 }
-
 
 const mapStateToProps = (state) => {
   return {
