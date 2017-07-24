@@ -23,21 +23,22 @@
 
 ## 技能
 * HTML
-* CSS > SCSS, RWD
-* Javascript > ReactJs, AngularJs 1.x edition, Express, jQuery
-* Webpack, Gulp
+* CSS > SCSS、RWD
+* Javascript > ReactJs、AngularJs 1.x edition、jQuery
+* nodeJs > Express
+* Webpack、Gulp
 * Git
-* Ubuntu, OSX
+* Ubuntu、OSX
 
 -----
 
 ## 執行專案
 
-### [ 嘉碼科技 ] 現金網 / 管理介面 (參與時間 2017.03 - 現今)
+### [ 嘉碼科技 ] [現金網 / 管理介面](https://www.gpms365.com/) (參與時間 2017.03 - 現今)
 
 #### 簡介：
 
-使用Express, AngularJs 為基底當作Server Side與Client Side框架引入第三方套件輔助如loadash, passport等來完成專案任務
+使用Express、AngularJs 為基底當作Server Side與Client Side框架引入第三方套件輔助如loadash、passport等來完成專案任務
 
 #### 職責：
 
@@ -54,11 +55,11 @@
 
 3.利用改功能的機會重構語義不清的函式與導入ES6 ＆ 7的撰寫並將可共用的部份模組化並撰寫Comment 或是另外寫 Markdown讓後續維護方便些
 
-### [ 一零四資訊科技 ] 104職涯社群更版 (參與時間 2016.02 - 2017.03)
+### [ 一零四資訊科技 ] [104職涯社群更版](http://plus.104.com.tw) (參與時間 2016.02 - 2017.03)
 
 #### 簡介：
 
-使用Express, ReactJs, Redux, Webpack 各式開源套件建立的Single Page Application 網站<br>利用nodeJs server side render, 搭配 Redux 處理資料流
+使用Express、ReactJs、Redux、Webpack 各式開源套件建立的Single Page Application 網站<br>利用nodeJs server side render、搭配 Redux 處理資料流
 
 #### 職責：
 
@@ -75,12 +76,12 @@
 2.開發服務類型功能盡量朝模組化方向撰寫彈性且可維護的程式碼並另外附加Markdown寫使用說明
 
 
-### [ 一零四資訊科技 ] [104職涯社群](http://plus.104.com.tw) (參與時間 2015.07 - 2016.02)
+### [ 一零四資訊科技 ] 104職涯社群 (參與時間 2015.07 - 2016.02)
 
 #### 簡介：
 
 使用AngularJs 1.x 版本建立的Single Page Application 網站<br>
-主要搭配Java撰寫的後端來做的社群網站，利用AngularJs 內建的Api來處理Router, 雙向資料綁定
+主要搭配Java撰寫的後端來做的社群網站，利用AngularJs 內建的Api來處理Router、雙向資料綁定
 
 #### 職責：
 
