@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-export const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     querydata: () => {
       request
@@ -20,3 +20,5 @@ export const mapDispatchToProps = (dispatch) => {
     },
   };
 };
+
+export default mapDispatchToProps;

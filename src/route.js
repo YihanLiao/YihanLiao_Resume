@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link, IndexRoute } from 'react-router';
 import { Router, Route, browserHistory } from 'react-router';
 import Main from './component/main';
 import About from './component/about';

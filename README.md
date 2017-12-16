@@ -13,7 +13,7 @@
 ## 簡歷
 | 期間               | 單位     | Title   |
 |-------------------|----------|---------|
-| 2017.03 - Present | 嘉碼科技公司| 軟體工程師 |
+| 2017.03 - Present | [嘉碼科技公司](http://www.gamasys.com.tw/)| 前端工程師 |
 | 2015.07 - 2017.03 | [一零四資訊科技股份有限公司](https://www.104.com.tw/)| 前端工程師 |
 | 2014.08 - 2015.07 | [就肆電競股份有限公司](https://www.4gamers.com.tw/) | 前端工程師 |
 | 2012.09 - 2014.08 | [國立中正大學](https://www.ccu.edu.tw/) 會計與資訊科技 | 碩士 |
@@ -26,7 +26,7 @@
 * CSS > SCSS、RWD
 * Javascript > ReactJs、AngularJs 1.x edition、jQuery
 * nodeJs > Express
-* Webpack、Gulp
+* Webpack、Gulp、Grunt 
 * Git
 * Ubuntu、OSX
 
@@ -34,7 +34,7 @@
 
 ## 執行專案
 
-### [ 嘉碼科技 ] [現金網 / 管理介面](https://www.gpms365.com/) (參與時間 2017.03 - 現今)
+### [ 嘉碼科技 ] 現金網 / 管理介面 (參與時間 2017.03 - 現今)
 
 #### 簡介：
 
